@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>七夕快乐</title>
+		<script src="E:/qixi/js/jquery-1.11.1.min.js"></script>
+		<link href="E:/qixi/css/index.css" rel="stylesheet" type="text/css" />
+		<script src="E:/qixi/js/index.js"></script>
+	</head>
+	<body>
+	 <!--可视区范围永远只能显示出一个主题页面的尺寸，
+	 所以我们需要再给祖先节点上套一个限制显示区域的节点-->
+		<div id="content"> 
+			<div class="content-wrap">
+				<ul>
+					<li>页面一</li>
+					<li>页面二</li>
+					<li>页面三</li>
+				</ul>
+				<div class="button">
+					<button>点击切换页面</button>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var swipe=setAttr($('#content'));
+			$('button').click(function(){
+				swipe.scrollTo($("#content").width()*2,5000);
+			});
+		</script>
+
+	</body>
+</html>
